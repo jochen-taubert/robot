@@ -2,6 +2,10 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 
+# Local env files
+.env
+.env.*
+
 # Logs
 logs/
 *.log
@@ -13,7 +17,6 @@ venv/
 env/
 
 # Editor/OS
-.vscode/
 .idea/
 *.swp
 .DS_Store

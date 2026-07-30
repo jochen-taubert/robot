@@ -1,0 +1,19 @@
+# Systemd Service – Autostart beim Booten
+# Kopieren nach: /etc/systemd/system/robot.service
+# Aktivieren:    sudo systemctl enable robot && sudo systemctl start robot
+
+[Unit]
+Description=Sprachgesteuerter Roboter
+After=network.target sound.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/robot
+Environment=OPENAI_API_KEY=sk-DEIN_KEY_HIER
+ExecStart=/usr/bin/python3 /home/pi/robot/robot.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

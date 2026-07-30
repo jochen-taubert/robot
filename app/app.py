@@ -4,17 +4,17 @@ import queue
 import subprocess
 import time
 
-from robot_app.assistant import AssistantService
-from robot_app.config import (
+from app.assistant import AssistantService
+from app.config import (
     GREETING,
     INACTIVITY_GOODBYE,
     INACTIVITY_GRACE_PERIOD,
     INACTIVITY_TIMEOUT,
     INACTIVITY_WARNING,
 )
-from robot_app.logging_setup import setup_logging
-from robot_app.motor import MotorController
-from robot_app.speech import SpeechIO
+from app.logging_setup import setup_logging
+from app.motor import MotorController
+from app.speech import SpeechIO
 
 
 class RobotApp:

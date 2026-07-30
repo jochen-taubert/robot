@@ -7,7 +7,7 @@ import subprocess
 
 import speech_recognition as sr
 
-from robot_app.config import (
+from app.config import (
     COMMAND_VOCAB,
     ENERGY_THRESHOLD,
     MIC_ALSA_CARD,

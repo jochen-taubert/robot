@@ -12,12 +12,12 @@ Sprachgesteuerter Roboter für Raspberry Pi mit folgender Pipeline:
 Das Projekt ist in klar getrennte Module aufgeteilt:
 
 - `robot.py` – schlanker Einstiegspunkt
-- `robot_app/app.py` – Orchestrierung des Laufzeitflusses
-- `robot_app/config.py` – zentrale Konfiguration und Konstanten
-- `robot_app/logging_setup.py` – Logging-Konfiguration (Konsole + rotierende Datei)
-- `robot_app/motor.py` – GPIO-/Motorsteuerung und Bewegungslogik
-- `robot_app/speech.py` – Spracherkennung, Queue, TTS und Mikrofon-Mute
-- `robot_app/assistant.py` – Claude-Integration + lokaler Regex-Fallback
+- `app/app.py` – Orchestrierung des Laufzeitflusses
+- `app/config.py` – zentrale Konfiguration und Konstanten
+- `app/logging_setup.py` – Logging-Konfiguration (Konsole + rotierende Datei)
+- `app/motor.py` – GPIO-/Motorsteuerung und Bewegungslogik
+- `app/speech.py` – Spracherkennung, Queue, TTS und Mikrofon-Mute
+- `app/assistant.py` – Claude-Integration + lokaler Regex-Fallback
 
 ## Voraussetzungen
 

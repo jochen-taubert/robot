@@ -5,7 +5,7 @@ import logging.handlers
 import os
 import sys
 
-from robot_app.config import LOG_DIR, LOG_FILE
+from app.config import LOG_DIR, LOG_FILE
 
 
 def setup_logging() -> logging.Logger:

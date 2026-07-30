@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Project entrypoint for the voice-controlled robot."""
 
-from robot_app.app import RobotApp
+from app.app import RobotApp
 
 
 def main():

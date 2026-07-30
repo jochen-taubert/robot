@@ -3,7 +3,7 @@
 import logging
 import time
 
-from robot_app.config import (
+from app.config import (
     CURVE_RATIO,
     DEFAULT_DURATION,
     DEFAULT_SPEED,

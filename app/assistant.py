@@ -6,7 +6,7 @@ import re
 
 from anthropic import APIConnectionError, APIError, Anthropic
 
-from robot_app.config import (
+from app.config import (
     CLAUDE_MODEL,
     DEFAULT_DURATION,
     DEFAULT_SPEED,

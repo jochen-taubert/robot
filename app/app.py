@@ -1,7 +1,6 @@
 """Main application orchestration."""
 
 import queue
-import subprocess
 import time
 
 from app.assistant import AssistantService
@@ -25,11 +24,7 @@ class RobotApp:
         self.assistant = AssistantService(self.log)
 
     def shutdown_pi(self):
-        self.log.info("[Shutdown] Fahre Raspberry Pi jetzt herunter ...")
-        try:
-            subprocess.run(["sudo", "shutdown", "-h", "now"], check=True)
-        except (subprocess.CalledProcessError, FileNotFoundError) as error:
-            self.log.error(f"[Shutdown] Herunterfahren fehlgeschlagen: {error}")
+        self.log.info("[Shutdown] Beende Robot-Service ...")
 
     def run(self):
         self.motor.setup()
@@ -76,7 +71,7 @@ class RobotApp:
                             self.speech.start_background_listening()
                             continue
 
-                        self.log.info("[Inaktivität] Keine Reaktion - Pi wird heruntergefahren")
+                        self.log.info("[Inaktivität] Keine Reaktion - Robot-Service wird beendet")
                         self.speech.say(INACTIVITY_GOODBYE)
                         self.shutdown_pi()
                         break

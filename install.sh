@@ -10,7 +10,10 @@ pip3 install --break-system-packages \
     openai \
     sounddevice \
     scipy \
-    RPi.GPIO
+    RPi.GPIO \
+    pre-commit
+
+pre-commit install
 
 echo ""
 echo "=== Fertig! ==="
